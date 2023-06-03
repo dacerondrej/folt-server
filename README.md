@@ -3,7 +3,7 @@ Server has been created for the final project in PV207 Businnes Process Manageme
 
 Technologies used: Python Django, PostgreSQL, Docker in deployment
 
-## To run the project follow instructions below:
+## To run the project follow instructions below
 1. Create virtual environment: `python3 -m venv <CUSTOM_ENV_NAME>`
 2. Run virtual environment: `source ./<CUSTOM_ENV_NAME>/bin/activate`
 3. Clone this repository
@@ -29,7 +29,7 @@ DATABASES = {
 
 Exit the environment by running: `deactivate` 
 
-## Endpoints:
+## Endpoints
 - `/folt/last-offer`
 - `/folt/couriers`
 - `/folt/pickups`
