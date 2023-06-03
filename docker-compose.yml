@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  foltdb:
+    image: postgres
+    container_name: foltdb
+    restart: always
+    env_file:
+      - ./common.env
+    volumes:
+      - ../data/postgres:/var/lib/postgresql/data
+    logging:
+      options:
+        max-size: "200k"
+        max-file: "10"
+  foltweb:
+    hostname: server.folt
+    container_name: foltweb
+    build: .
+    command: python manage.py runserver 0.0.0.0:8001
+    ports:
+      - "8001:8001"
+    restart: always
+    env_file:
+      - ./common.env
+    volumes:
+      - .:/folt
+    logging:
+      options:
+        max-size: "200k"
+        max-file: "10"
+    depends_on:
+      - foltdb
