@@ -8,7 +8,8 @@ Technologies used: Python Django, PostgreSQL, Docker in deployment
 2. Run virtual environment: `source ./<CUSTOM_ENV_NAME>/bin/activate`
 3. Clone this repository
 4. Move to it: `cd folt/`
-5. Change database settings in `folt/settings.py` according to your PostgreSQL DB:
+5. Install dependencies: `pip3 install -r requirements.txt`
+6. Change database settings in `folt/settings.py` according to your PostgreSQL DB:
 ```
 DATABASES = {
     'default': {
